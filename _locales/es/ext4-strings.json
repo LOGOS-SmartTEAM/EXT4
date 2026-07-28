@@ -10,11 +10,11 @@
     "ext4_smartteam4.ext4BotonEnPin|block": "Botón │ en pin %puerto",
     "ext4_smartteam4.ext4BotonComparar|block": "%reading %op %value",
 
-    "ext4_smartteam4.ext4Dht11|block": "%dato │ en pin %puerto",
-    "ext4_smartteam4.ext4Dht11Comparar|block": "%medida %op %valor",
-    "Ext4DatoDHT11|block": "Dato DHT11",
-    "Ext4DatoDHT11.Humedad|block": "Humedad",
-    "Ext4DatoDHT11.Temperatura|block": "Temperatura",
+    "ext4_smartteam4.ext4SueloEnPin|block": "Sensor de Suelo │ en pin %puerto",
+    "ext4_smartteam4.ext4SueloEstado|block": "%medida está %estado",
+    "Ext4EstadoSuelo|block": "Estado del suelo",
+    "Ext4EstadoSuelo.Humedo|block": "Húmedo",
+    "Ext4EstadoSuelo.Seco|block": "Seco",
 
     "Ext4CompareOperator|block": "Operador",
     "Ext4CompareOperator.Eq|block": "=",
