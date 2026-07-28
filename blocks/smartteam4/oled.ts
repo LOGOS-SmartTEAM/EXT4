@@ -311,12 +311,11 @@ namespace ext4_smartteam4 {
      * @param columna columna de la OLED (0–15), eg: Ext4OledColumna.C0
      */
     //% blockId=ext4_oled_show_text
-    //% block="Escribir %texto en fila %fila columna %columna"
+    //% block="OLED │ Escribir %texto en fila %fila en columna %columna en pin I2C"
     //% texto.shadow=text texto.defl="abc"
     //% fila.defl=Ext4OledFila.F0
     //% columna.defl=Ext4OledColumna.C0
-    //% group="OLED" color="#34c2eb" icon="\uf108"
-    //% weight=10 blockGap=10
+    //% group="PANTALLAS" color="#35BFE9" weight=90 blockGap=8
     export function showString(texto: any, fila: Ext4OledFila, columna: Ext4OledColumna): void {
         ensureOledInit()
         clearFila(fila)
@@ -332,9 +331,8 @@ namespace ext4_smartteam4 {
      * Borra todos los textos de la OLED I2C.
      */
     //% blockId=ext4_oled_clear
-    //% block="Borrar textos de la OLED en el pin IIC"
-    //% group="OLED" color="#34c2eb" icon="\uf108"
-    //% weight=8 blockGap=10
+    //% block="OLED │ borrar textos en pin I2C"
+    //% group="PANTALLAS" color="#35BFE9" weight=85 blockGap=8
     export function clear(): void {
         ensureOledInit()
         clearOled()

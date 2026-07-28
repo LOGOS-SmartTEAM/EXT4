@@ -53,8 +53,8 @@ namespace ext4_smartteam4 {
      * Lee la distancia en centímetros del sensor ultrasónico I2C.
      */
     //% blockId=ext4_ultrasonic_sensor
-    //% block="Ultrasonido en el puerto IIC"
-    //% group="Sensores" color="#34c2eb" weight=10 blockGap=8
+    //% block="Ultrasonido │ en pin I2C"
+    //% blockHidden=1 color="#35BFE9"
     export function ext4UltrasonicCm(): number {
         return medirI2CCm()
     }
@@ -66,10 +66,9 @@ namespace ext4_smartteam4 {
      * @param estado Verdadero = detectado; Falso = no detectado
      */
     //% blockId=ext4_ultrasonic_detect
-    //% block="$distancia detecta objeto %estado"
+    //% block="%distancia detecta objeto %estado"
     //% distancia.shadow=ext4_ultrasonic_sensor
-    //% color="#00A4A6" colorSecondary="#34c2eb"
-    //% group="Sensores" weight=9 blockGap=8
+    //% group="SENSORES" color="#006970" weight=100 blockGap=8
     export function ext4UltrasonicDetecta(
         distancia: number,
         estado: Ext4ObjetoDetectado

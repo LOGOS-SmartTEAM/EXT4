@@ -9,6 +9,6 @@ const CATEGORIAS: Record<CategoriaId, CategoriaConfig> = {
         iconoFa: "\\uf135",
         iconoArchivo: "icons/smartteam4/categoria.png",
         weight: 90,
-        subcategorias: ["Variables", "Sensores", "Salidas", "Motores", "OLED"],
+        subcategorias: ["SENSORES", "SALIDAS", "MOVIMIENTO", "PANTALLAS", "VARIABLES"],
     },
 };

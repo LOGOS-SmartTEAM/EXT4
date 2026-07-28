@@ -41,10 +41,17 @@ namespace ext4_smartteam4 {
     }
 
     export enum Ext4DireccionGiro {
-        //% block="↰ Izquierda"
+        //% block="Girar a la izquierda"
         Izquierda = 0,
-        //% block="Derecha ↱"
+        //% block="Girar a la derecha"
         Derecha = 1,
+    }
+
+    export enum Ext4AvanceRetroceso {
+        //% block="Avanzar"
+        Avanzar = 0,
+        //% block="Retroceder"
+        Retroceder = 1,
     }
 
     // ── Protocolo I2C interno ────────────────────────────────────────
@@ -103,14 +110,13 @@ namespace ext4_smartteam4 {
      * Mueve los motores en la dirección indicada a la velocidad indicada.
      */
     //% blockId=ext4_motor_move
-    //% block="Motores %movimiento ||  Velocidad %velocidad"
+    //% block="%movimiento │ Velocidad %velocidad"
     //% movimiento.fieldEditor="gridpicker"
     //% velocidad.min=0 velocidad.max=100 velocidad.defl=50
-    //% expandableArgumentMode="toggle"
-    //% group="Motores" color="#34c2eb" weight=90 blockGap=8
+    //% group="MOVIMIENTO" color="#35BFE9" weight=100 blockGap=8
     export function ext4MotoresMover(
         movimiento: Ext4MovimientoMotores,
-        velocidad = 50
+        velocidad: number
     ): void {
         const { s1, s2 } = movimientoToSpeeds(movimiento, velocidad)
         runDualMotors(s1, s2)
@@ -121,13 +127,16 @@ namespace ext4_smartteam4 {
      * Calibrar con RPM_A_VEL_100.
      */
     //% blockId=ext4_motor_girar
-    //% block="Girar a la %direccion ||  Velocidad %velocidad ángulo de %angulo °"
+    //% block="%direccion │ Velocidad %velocidad ángulo de %angulo"
     //% direccion.fieldEditor="gridpicker"
     //% velocidad.min=1 velocidad.max=100 velocidad.defl=50
     //% angulo.min=1 angulo.max=360 angulo.defl=90
-    //% expandableArgumentMode="toggle"
-    //% group="Motores" color="#34c2eb" weight=85 blockGap=8
-    export function girar(direccion: Ext4DireccionGiro, velocidad = 50, angulo = 90): void {
+    //% group="MOVIMIENTO" color="#35BFE9" weight=80 blockGap=8
+    export function girar(
+        direccion: Ext4DireccionGiro,
+        velocidad: number,
+        angulo: number
+    ): void {
         if (angulo <= 0 || velocidad <= 0) return
         const rpm_efectivas = RPM_A_VEL_100 * velocidad / 100
         const arco_cm = 3.14159 * DIST_ENTRE_RUEDAS_CM * angulo / 360
@@ -145,21 +154,23 @@ namespace ext4_smartteam4 {
      * Mueve el robot una distancia en centímetros y frena automáticamente.
      */
     //% blockId=ext4_motor_cm
-    //% block="Motores %movimiento por %cm cm ||  Velocidad %velocidad"
+    //% block="%movimiento │ Velocidad %velocidad por %cm cm"
     //% movimiento.fieldEditor="gridpicker"
-    //% cm.min=1 cm.max=500 cm.defl=10
     //% velocidad.min=1 velocidad.max=100 velocidad.defl=50
-    //% expandableArgumentMode="toggle"
-    //% group="Motores" color="#34c2eb" weight=84 blockGap=8
+    //% cm.min=1 cm.max=500 cm.defl=10
+    //% group="MOVIMIENTO" color="#35BFE9" weight=90 blockGap=8
     export function moverCm(
-        movimiento: Ext4MovimientoMotores,
-        cm: number,
-        velocidad = 50
+        movimiento: Ext4AvanceRetroceso,
+        velocidad: number,
+        cm: number
     ): void {
         if (velocidad <= 0 || cm <= 0) return
+        const mov = movimiento === Ext4AvanceRetroceso.Avanzar
+            ? Ext4MovimientoMotores.Avanzar
+            : Ext4MovimientoMotores.Retroceder
         const rpm_efectivas = RPM_A_VEL_100 * velocidad / 100
         const tiempo = (cm * 60000) / (CIRCUNFERENCIA_RUEDA_CM * rpm_efectivas)
-        const { s1, s2 } = movimientoToSpeeds(movimiento, velocidad)
+        const { s1, s2 } = movimientoToSpeeds(mov, velocidad)
         runDualMotors(s1, s2)
         basic.pause(tiempo)
         runDualMotors(0, 0)

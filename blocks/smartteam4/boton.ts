@@ -23,7 +23,9 @@ namespace ext4_smartteam4 {
     /**
      * Lectura interna del botón (no visible en la caja de herramientas).
      */
-    //% blockId=ext4_button_sensor block="BOTÓN en el puerto %puerto" blockHidden=1 color=#fcbb2b
+    //% blockId=ext4_button_sensor
+    //% block="Botón │ en pin %puerto"
+    //% blockHidden=1 color="#FFB800"
     export function ext4BotonEnPin(puerto: Ext4Puerto): number {
         const pin = puertoToGpioPin(puerto)
         pins.setPull(pin, PinPullMode.PullUp)
@@ -36,7 +38,9 @@ namespace ext4_smartteam4 {
      * @param op operador de comparación
      * @param value valor a comparar, eg: 1
      */
-    //% blockId=ext4_button_compare block="$reading $op $value" color=#00A4A6 colorSecondary=#fcbb2b group="Sensores" weight=0 blockGap=8
+    //% blockId=ext4_button_compare
+    //% block="%reading %op %value"
+    //% group="SENSORES" color="#006970" weight=95 blockGap=8
     //% reading.shadow=ext4_button_sensor
     //% value.shadow=math_number
     //% value.defl=1
