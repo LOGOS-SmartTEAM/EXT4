@@ -4,9 +4,9 @@
 const CATEGORIAS: Record<CategoriaId, CategoriaConfig> = {
     SMARTTEAM4: {
         namespace: "ext4_smartteam4",
-        nombre: "SmartTEAM4",
-        color: "#1565C0",
-        iconoFa: "\\uf135",
+        nombre: "SmartTEAM 4",
+        color: "#f3a32b",
+        iconoFa: "\\uf1b3",
         iconoArchivo: "icons/smartteam4/categoria.png",
         weight: 90,
         subcategorias: ["SENSORES", "SALIDAS", "MOVIMIENTO", "PANTALLAS", "VARIABLES"],

@@ -1,5 +1,5 @@
 {
-    "{id:category}ext4_smartteam4": "SmartTEAM4",
+    "{id:category}ext4_smartteam4": "SmartTEAM 4",
 
     "ext4_smartteam4.ext4UltrasonicCm|block": "Ultrasonido │ en pin I2C",
     "ext4_smartteam4.ext4UltrasonicDetecta|block": "%distancia detecta objeto %estado",
