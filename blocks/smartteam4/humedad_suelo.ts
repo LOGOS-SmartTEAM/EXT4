@@ -46,7 +46,7 @@ namespace ext4_smartteam4 {
     //% blockId=ext4_suelo_estado
     //% block="%medida está %estado"
     //% medida.shadow=ext4_suelo_sensor
-    //% group="SENSORES" color="#006970" weight=90 blockGap=8
+    //% group="SENSORES" color="#006970" weight=95 blockGap=8
     export function ext4SueloEstado(
         medida: number,
         estado: Ext4EstadoSuelo

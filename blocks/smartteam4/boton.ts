@@ -40,7 +40,7 @@ namespace ext4_smartteam4 {
      */
     //% blockId=ext4_button_compare
     //% block="%reading %op %value"
-    //% group="SENSORES" color="#006970" weight=95 blockGap=8
+    //% group="SENSORES" color="#006970" weight=100 blockGap=8
     //% reading.shadow=ext4_button_sensor
     //% value.shadow=math_number
     //% value.defl=1

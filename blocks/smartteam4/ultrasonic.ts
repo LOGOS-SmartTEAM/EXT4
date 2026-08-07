@@ -68,7 +68,7 @@ namespace ext4_smartteam4 {
     //% blockId=ext4_ultrasonic_detect
     //% block="%distancia detecta objeto %estado"
     //% distancia.shadow=ext4_ultrasonic_sensor
-    //% group="SENSORES" color="#006970" weight=100 blockGap=8
+    //% group="SENSORES" color="#006970" weight=90 blockGap=8
     export function ext4UltrasonicDetecta(
         distancia: number,
         estado: Ext4ObjetoDetectado
