@@ -1,0 +1,21 @@
+{
+  "bloques": "STEAMbit blocks: sensors, outputs, motors and screens.",
+  "bloques.boton": "Returns 1 if the button is pressed and 0 if it is not.",
+  "bloques.botonLogico": "Compares the button value with a number.",
+  "bloques.establecerCantidad": "Stores a number in Quantity.",
+  "bloques.led": "Turns the LED on or off.",
+  "bloques.leerCantidad": "The current value of Quantity.",
+  "bloques.movimientoCm": "Moves forward or backward the chosen centimeters, then stops.",
+  "bloques.movimientoGirar": "Turns the robot the chosen degrees, then stops.",
+  "bloques.movimientoSimple": "Moves the robot at the chosen speed (0 to 100).",
+  "bloques.oledBorrar": "Clears everything on the OLED screen.",
+  "bloques.oledEscribir": "Writes text or a number on the OLED screen.",
+  "bloques.puertoToAnalogPin": "Converts a port to its analog pin.",
+  "bloques.puertoToDigitalPin": "Converts a port to its digital pin.",
+  "bloques.restarCantidad": "Subtracts 1 from Quantity.",
+  "bloques.suelo": "Measures soil moisture (0 to 1023).",
+  "bloques.sueloLogico": "Tells whether the soil is dry or wet.",
+  "bloques.sumarCantidad": "Adds 1 to Quantity.",
+  "bloques.ultrasonido": "Measures the distance to an object in centimeters (0 to 200).",
+  "bloques.ultrasonidoLogico": "Detects whether there is an object between 3 and 25 cm away."
+}

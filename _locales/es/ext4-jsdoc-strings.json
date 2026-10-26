@@ -1,5 +1,21 @@
 {
-    "ext4_smartteam4.led": "Escribe el estado del LED en el puerto GPIO indicado.",
-    "Ext4Puerto": "Puerto GPIO SmartTEAM4 (P1–P4).",
-    "Ext4LedEstado": "Estado del LED: ON (0) u OFF (1)."
+  "bloques": "Bloques STEAMbit: sensores, salidas, motores y pantallas.",
+  "bloques.boton": "Devuelve 1 si el botón está presionado y 0 si está suelto.",
+  "bloques.botonLogico": "Compara el valor del botón con un número.",
+  "bloques.establecerCantidad": "Guarda un número en Cantidad.",
+  "bloques.led": "Prende o apaga el LED.",
+  "bloques.leerCantidad": "El valor actual de Cantidad.",
+  "bloques.movimientoCm": "Avanza o retrocede los centímetros elegidos y se detiene.",
+  "bloques.movimientoGirar": "Gira el robot los grados elegidos y se detiene.",
+  "bloques.movimientoSimple": "Mueve el robot a la velocidad elegida (0 a 100).",
+  "bloques.oledBorrar": "Borra todo lo escrito en la pantalla OLED.",
+  "bloques.oledEscribir": "Escribe un texto o un número en la pantalla OLED.",
+  "bloques.puertoToAnalogPin": "Convierte un puerto en su pin analógico.",
+  "bloques.puertoToDigitalPin": "Convierte un puerto en su pin digital.",
+  "bloques.restarCantidad": "Resta 1 a Cantidad.",
+  "bloques.suelo": "Mide la humedad de la tierra (0 a 1023).",
+  "bloques.sueloLogico": "Indica si la tierra está seca o húmeda.",
+  "bloques.sumarCantidad": "Suma 1 a Cantidad.",
+  "bloques.ultrasonido": "Mide la distancia a un objeto en centímetros (0 a 200).",
+  "bloques.ultrasonidoLogico": "Detecta si hay un objeto entre 3 y 25 cm."
 }
